@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="76678c32084d4784944dc992fe85ea71" Name="Diagram1">
+        <EntityTypeShape EntityType="PP.PM01_8Model.Client" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="PP.PM01_8Model.CommitPackage" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="PP.PM01_8Model.Package" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PP.PM01_8Model.Receipt" Width="1.5" PointX="6" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PP.PM01_8Model.Role" Width="1.5" PointX="1.5" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PP.PM01_8Model.Service" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PP.PM01_8Model.Status" Width="1.5" PointX="3.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PP.PM01_8Model.sysdiagrams" Width="1.5" PointX="3.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PP.PM01_8Model.TypePackage" Width="1.5" PointX="1.5" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PP.PM01_8Model.TypeService" Width="1.5" PointX="0.75" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PP.PM01_8Model.User" Width="1.5" PointX="3.75" PointY="16.25" IsExpanded="true" />
+        <AssociationConnector Association="PP.PM01_8Model.FK_CommitPackage_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="PP.PM01_8Model.FK_Receipt_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="PP.PM01_8Model.FK_CommitPackage_Package" ManuallyRouted="false" />
+        <AssociationConnector Association="PP.PM01_8Model.FK_Package_TypePackage" ManuallyRouted="false" />
+        <AssociationConnector Association="PP.PM01_8Model.FK_Receipt_Package" ManuallyRouted="false" />
+        <AssociationConnector Association="PP.PM01_8Model.FK_Service_Package" ManuallyRouted="false" />
+        <AssociationConnector Association="PP.PM01_8Model.FK_Receipt_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="PP.PM01_8Model.FK_Receipt_User" ManuallyRouted="false" />
+        <AssociationConnector Association="PP.PM01_8Model.FK_User_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="PP.PM01_8Model.FK_Service_TypeService" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

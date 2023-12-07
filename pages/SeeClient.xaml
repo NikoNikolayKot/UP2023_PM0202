@@ -1,0 +1,37 @@
+﻿<Page x:Class="UP2023_PM0202.pages.SeeClient"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UP2023_PM0202.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SeeClient">
+
+    <Grid>
+        <DataGrid x:Name="dgClient"
+                  AutoGenerateColumns="False"
+                  Background="#0000">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding clientID}"
+                                        Header="№п/п"
+                                        Width="0.6*"/>
+                <DataGridTextColumn Binding="{Binding lastName}"
+                                        Header="Фамилия"
+                                        Width="*"/>
+                <DataGridTextColumn Binding="{Binding name}"
+                                    Header="Имя"
+                                    Width="*"/>
+                <DataGridTextColumn Binding="{Binding phone}"
+                                    Header="Телефон"
+                                    Width="*"/> 
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Name="bGoBack"
+                Click="bGoBack_Click"
+                Content="Вернуться"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Center"
+                Width="300"/>
+    </Grid>
+</Page>

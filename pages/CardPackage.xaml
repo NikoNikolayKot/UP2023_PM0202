@@ -1,0 +1,104 @@
+﻿<Page x:Class="UP2023_PM0202.pages.CardPackage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UP2023_PM0202.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1500"
+      Title="CardPackage">
+
+    <Grid>
+        <ListView x:Name="lwPackage"
+                  Background="#0000"
+                  BorderThickness="0"
+                  Margin="0 45 0 0">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="25"/>
+                            <ColumnDefinition Width="512"/>
+                            <ColumnDefinition Width="25"/>
+                            <ColumnDefinition Width="200"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="25"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="{Binding image}"
+                               Height="200"
+                               Grid.Column="0"
+                               Grid.Row="0"
+                               Grid.RowSpan="5"/>
+                        <StackPanel Orientation="Horizontal"
+                                    Grid.Column="2"
+                                    Grid.Row="2">
+                            <TextBlock Text="Называется: "/>
+                            <TextBlock Text="{Binding name}"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Grid.Column="2"
+                                    Grid.Row="3">
+                            <TextBlock Text="Имеет тип: "/>
+                            <TextBlock Text="{Binding TypePackage.name}"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Grid.Column="2"
+                                    Grid.Row="4">
+                            <TextBlock Text="Имеет тип: "/>
+                            <TextBlock Text="{Binding TypePackage.description}"/>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Подрядчик: "/>
+                <ComboBox Name="cbUser"
+                              Width="350">
+                    <ComboBox.Resources>
+                        <SolidColorBrush x:Key="{x:Static SystemColors.WindowBrushKey}" Color="#0000" />
+                    </ComboBox.Resources>
+                </ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Статус: "/>
+                    <ComboBox Name="cbStatus"
+                          Width="350">
+                    <ComboBox.Resources>
+                        <SolidColorBrush x:Key="{x:Static SystemColors.WindowBrushKey}" Color="#0000" />
+                    </ComboBox.Resources>
+                </ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Клиент: "/>
+                    <ComboBox Name="cbClient"
+                              Width="300">
+                        <ComboBox.Resources>
+                            <SolidColorBrush x:Key="{x:Static SystemColors.WindowBrushKey}" Color="#0000" />
+                        </ComboBox.Resources>
+                    </ComboBox>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Center">
+            <Button x:Name="bGoBack"
+                    Click="bGoBack_Click"
+                    Content="Вернуться"
+                    Width="300"/>
+            <Button x:Name="bGoCard"
+                    Click="bGoCard_Click"
+                    Content="Зафиксировать заказ"
+                    Width="300"/>
+        </StackPanel>
+    </Grid>
+</Page>

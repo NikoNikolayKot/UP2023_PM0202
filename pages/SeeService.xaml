@@ -1,0 +1,75 @@
+﻿<Page x:Class="UP2023_PM0202.pages.SeeService"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UP2023_PM0202.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="see">
+
+    <Grid>
+        <ListView x:Name="lwService"
+                  Background="#0000"
+                  BorderThickness="0">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="25"/>
+                            <ColumnDefinition Width="512"/>
+                            <ColumnDefinition Width="25"/>
+                            <ColumnDefinition Width="200"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="{Binding image}"
+                               Height="200"
+                               Grid.Column="0"
+                               Grid.Row="0"
+                               Grid.RowSpan="5"/>
+                        <StackPanel Orientation="Horizontal"
+                                    Grid.Column="2"
+                                    Grid.Row="1">
+                            <TextBlock Text="Входив в пакет услуг: "/>
+                            <TextBlock Text="{Binding Package.name}"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Grid.Column="2"
+                                    Grid.Row="2">
+                            <TextBlock Text="Называется: "/>
+                            <TextBlock Text="{Binding name}"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Grid.Column="2"
+                                    Grid.Row="3">
+                            <TextBlock Text="Имеет тип: "/>
+                            <TextBlock Text="{Binding TypeService.name}"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"
+                                    Grid.Column="4"
+                                    Grid.Row="2"
+                                    Grid.RowSpan="5">
+                            <TextBlock Text="Стоит: "/>
+                            <TextBlock Text="{Binding price}"/>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Center">
+            <Button x:Name="bGoBack"
+                    Click="bGoBack_Click"
+                    Content="Вернуться"
+                    Width="300"/>
+        </StackPanel>
+    </Grid>
+</Page>
